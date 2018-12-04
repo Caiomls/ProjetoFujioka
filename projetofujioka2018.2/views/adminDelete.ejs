@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav">
+      <li class="navbar"> <a class="navbar" href="chat">ChatFujioka</a>
+      <li #navbar class="navbar"><a class="navbar" href="logoff">Desloggar</a></li>
+      <li #navbar class="navbar"><a class="navbar" href="adminDelete">Deletar Usuário</a></li>
+    </ul>
+  </div>
+</nav>
+<style>
+  ul {
+    list-style-type: square;
+  }
+  ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li.navbar  {
+      float: left;
+  }
+
+  li.navbar a.navbar {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  li a:hover {
+      background-color: #111;
+  }
+</style>
+  <body>
+    <h1>Deletar um usuário</h1>
+    <form action="/users/adminDelete" method="POST">
+      <p>Digite o email de cadastro do usuário a ser deletado:</p>
+      <input type="text" name="email"> <br>
+      <input type="submit" value="send"> <br>
+    </form>
+    <p>
+    </p>
+  </body>
+</html>

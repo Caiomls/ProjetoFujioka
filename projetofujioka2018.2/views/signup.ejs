@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Signup</h1>
+    <form action="/users/signup" method="POST">
+      Usuario: <input type="text" name="username" /> <br />
+      Senha:  <input type="password" name="password" /> <br />
+      E-mail: <input type="text" name="email" /> <br />
+      <input type="submit" value="Save" />
+    </form>
+    <% if(message) { %>
+      <p>
+        <label style="color:Red"><%= message %></label>
+      </p>
+    <%}%>
+  </body>
+</html>
