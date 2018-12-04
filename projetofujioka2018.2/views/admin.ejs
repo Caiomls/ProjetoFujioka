@@ -37,17 +37,37 @@
       li a:hover {
           background-color: #111;
       }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+
+      tr:nth-child(even) {
+          background-color: #dddddd;
+      }
     </style>
   </head>
   <body>
-    <ol type="Usuarios">
-      <ul>
-      <% users.forEach(function (user) { %>
-        <li>
-          <h1><%= user.username %> </h1>
-        </li>
-      <% }) %>
-      </ul>
-    </ol>
+    <table>
+      <tr>
+        <th>Usuario</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <% users.forEach(function (user) { %>
+          <tr>
+            <td> <%= user.username %> </td>
+            <td> <%= user.email %> </td>
+          </tr>
+        <% }) %>
+      </tr>
+    </table>
   </body>
 </html>

@@ -13,7 +13,7 @@ module.exports = function(to, subject, text){
 
     const message = {
         from: process.env.SMTP_USERNAME,
-        to: "Caiomls@hotmail.com",
+        to,
         subject,
         text,
 

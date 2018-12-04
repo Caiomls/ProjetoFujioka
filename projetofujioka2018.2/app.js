@@ -28,7 +28,7 @@ require('./auth')(passport);
 app.use(session({
   store: new MongoStore({
     db: global.db,
-    ttl: 30 * 60 // = 30 minutos de sessão
+    ttl: 2 * 60 // = 2 minutos de sessão
   }),
   secret: '123',//configure um segredo seu aqui
   resave: false,
@@ -44,7 +44,8 @@ app.use('/users', users)
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
-  next(err);
+  console.log(err.status);
+  next(res.redirect('/login'));
 });
 
 // error handler

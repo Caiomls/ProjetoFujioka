@@ -14,9 +14,13 @@ function authenticationMiddleware () {
 
 function authenticateAdminMiddleware () {
   return function (req, res, next) {
-    if (req.user.isAdmin === true){
-      return next()
+    try {
+      if (req.user.isAdmin === true){
+        return next()
     } else {
+      res.redirect('/chat')
+    }
+    } catch (e) {
         res.redirect('/login')
     }
   }

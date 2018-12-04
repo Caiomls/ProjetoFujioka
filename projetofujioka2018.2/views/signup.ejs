@@ -1,5 +1,36 @@
 <!DOCTYPE html>
 <html>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav">
+      <li class="navbar"> <a class="navbar" href="chat">ChatFujioka</a>
+      <li #navbar class="navbar"><a class="navbar" href="logoff">Desloggar</a></li>
+    </ul>
+  </div>
+</nav>
+<style>
+  ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li.navbar  {
+      float: left;
+  }
+
+  li.navbar a.navbar {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  li a:hover {
+      background-color: #111;
+  }
+</style>
   <body>
     <h1>Signup</h1>
     <form action="/users/signup" method="POST">
