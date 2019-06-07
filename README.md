@@ -10,7 +10,7 @@ Hudson Rangel,  1410110203
 # ProjetoFujioka
 
 <br>
-Prerequisitos: Mongodb, Nodejs
+Prerequisitos: Mongodb, Nodejs, NPM
 <br>
 Para instalar levante um banco de dados no Mongo chamado de "chatdemo" e depois navegue até a pasta do projeto no prompt de comando e rode um "npm install"
 <br>
